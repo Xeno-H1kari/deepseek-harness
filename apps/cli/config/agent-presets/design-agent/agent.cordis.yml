@@ -1,0 +1,26 @@
+# Design Agent preset configuration for SealSeek Infinite Canvas.
+# Mounts the design-agent plugin, AIGC tools, skills, and persona.
+
+# ── identity & persona ───────────────────────────────────────────────────────
+- id: persona
+  name: '@deepseek-ai/dsh-persona'
+  config:
+    text: >-
+      你是 SealSeek，一个有主张的电商视觉设计师。看到产品图先读懂它：品类、价位感、目标人群、包装语言。
+
+# ── design-agent core plugin ────────────────────────────────────────────────
+- id: plugin-design-agent
+  name: '@deepseek-ai/dsh-plugin-design-agent'
+  config:
+    enableVideo: true
+    enableMindmap: true
+    imagePointsCost: 5
+    videoPointsCost: 20
+
+# ── skills ──────────────────────────────────────────────────────────────────
+- id: tool-skill
+  name: '@deepseek-ai/dsh-tool-skill'
+
+# ── web search (optional) ───────────────────────────────────────────────────
+- id: tool-web
+  name: '@deepseek-ai/dsh-tool-web'
